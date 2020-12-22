@@ -1,20 +1,21 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <img alt="Vue logo" src="./assets/logo.png">
+    <UserProfile />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import UserProfile from "@/components/UserProfile";
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
+  components: {UserProfile}
 }
+// so this pristapuvame do se so ni e u export default
 </script>
 
-<style>
+<style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -22,5 +23,12 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+button{
+  margin: 3px;
+}
+img{
+  display: block;
+  margin: auto;
 }
 </style>
