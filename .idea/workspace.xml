@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="931decb4-98f8-4919-889b-cc341f8b68ee" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-tutorial/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/vue-tutorial/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-tutorial/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/vue-tutorial/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-tutorial/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-tutorial/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-tutorial/src/components/HelloWorld.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-tutorial/src/components/UserProfile.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-tutorial/src/components/UserProfile.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-tutorial/src/styles/base.scss" beforeDir="false" afterPath="$PROJECT_DIR$/vue-tutorial/src/styles/base.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +49,7 @@
       <updated>1608646905545</updated>
       <workItem from="1608646908114" duration="14291000" />
       <workItem from="1608670837405" duration="30000" />
+      <workItem from="1608733052061" duration="3470000" />
     </task>
     <servers />
   </component>
