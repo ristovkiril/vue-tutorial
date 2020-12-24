@@ -20,7 +20,7 @@ export const users = [
             firstName: "Vlatko",
             lastName: "Ristov",
             email: "ristov.vlatko@yahoo.com",
-            isAdmin: true,
+            isAdmin: false,
             twoots: [
                 { id: 1,  content: "Twooter is Amizing!", date: new Date() },
                 { id: 2,  content: "Dont forget to Subscribe!", date: new Date() },
@@ -35,7 +35,7 @@ export const users = [
             firstName: "Olivera",
             lastName: "Ristov",
             email: "ristov.olivera@yahoo.com",
-            isAdmin: true,
+            isAdmin: false,
             twoots: [
                 { id: 1,  content: "Twooter is Amizing!", date: new Date() },
                 { id: 2,  content: "Dont forget to Subscribe!", date: new Date() },

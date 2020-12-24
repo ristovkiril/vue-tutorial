@@ -1,10 +1,35 @@
 <template>
   <div id="nav">
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/about">About</router-link> |
+    <router-link v-if="user"
+        :to="{
+               name: 'UserProfile',
+               params: {userId: user.id}
+              }"
+        :key="user.id">{{ user.username }}</router-link>
   </div>
   <router-view/>
 </template>
+
+<script>
+import { useStore } from 'vuex';
+import {computed} from "vue";
+
+export  default {
+  name: "App",
+  setup() {
+    const store = useStore();
+    const user = computed(() => store.state.User.user);
+
+
+    return {
+      user
+    }
+  }
+}
+
+</script>
 
 <style lang="scss">
 #app {
