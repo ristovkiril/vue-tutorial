@@ -1,19 +1,10 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <UserProfile />
+  <div id="nav">
+    <router-link to="/">Home</router-link> |
+    <router-link to="/about">About</router-link>
   </div>
+  <router-view/>
 </template>
-
-<script>
-import UserProfile from "@/components/UserProfile";
-
-export default {
-  name: 'App',
-  components: {UserProfile}
-}
-// so this pristapuvame do se so ni e u export default
-</script>
 
 <style lang="scss">
 #app {
@@ -22,13 +13,18 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
-button{
-  margin: 3px;
-}
-img{
-  display: block;
-  margin: auto;
+
+#nav {
+  padding: 30px;
+
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+
+    &.router-link-exact-active {
+      color: #42b983;
+    }
+  }
 }
 </style>

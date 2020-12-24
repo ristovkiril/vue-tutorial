@@ -3,7 +3,7 @@
     <div class="user-profile__user-panel">
       <h1 class="user-profile__username">@{{ user.username }}</h1>
       <div class="user-profile__admin-badge" v-if="user.isAdmin">
-        Admin
+        Admin {{userId}}
       </div>
       <div class="user-profile__follower-count">
         <strong>Followers: </strong> {{ followers }}
@@ -26,32 +26,18 @@
 <script>
 import TwootItem from "@/components/TwootItem";
 import CreateTwoot from "@/components/CreateTwoot";
+import { useRoute } from "vue-router";
+import {users} from '@/assets/users'
 
 export default {
   name: "UserProfile",
   components: {CreateTwoot, TwootItem},
   data() {
+    const router = useRoute();
     return {
       followers: 0,
-      user: {
-        id: 1,
-        username: "ristov.kiril",
-        firstName: "Kiril",
-        lastName: "Ristov",
-        email: "ristov.kiril@yahoo.com",
-        isAdmin: true,
-        twoots: [
-          { id: 1,  content: "Twooter is Amizing!", date: new Date() },
-          { id: 2,  content: "Dont forget to Subscribe!", date: new Date() },
-          { id: 3, content: "How are you today?", date: new Date() },
-          { id: 4, content: "Happy new Year", date: new Date() },
-          { id: 6, content: "2021 sucks!", date: new Date() },
-          { id: 7, content: "2021 sucks!", date: new Date() },
-          { id: 8, content: "2021 sucks!", date: new Date() },
-          { id: 9, content: "2021 sucks!", date: new Date() },
-          { id: 10, content: "2021 sucks!", date: new Date() }
-        ]
-      }
+      userId: router.params.userId,
+      user: {}
     }
   },
   watch: {
@@ -87,14 +73,19 @@ export default {
              id: this.user.twoots.length + 1,
              content: newTwootContent,
              date: new Date()
-           }
-       )
+           });
         this.newTwootContent = "";
+        users[this.user.id].twoots = this.user.twoots;
       }
     }
   },
   mounted() {
     this.followUser();
+    const router = useRoute();
+    const userId = router.params.userId;
+    this.userId = userId;
+    this.user = users[userId-1] || users[0];
+
   }
 }
 </script>
